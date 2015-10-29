@@ -9,11 +9,18 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'ruby-units'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'rubocop', require: false
+  gem 'faker'
 end
 
+group :test do
+  gem 'pry'
+  gem 'shoulda-matchers'
+end
