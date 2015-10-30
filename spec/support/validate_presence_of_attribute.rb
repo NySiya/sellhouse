@@ -1,14 +1,11 @@
 module ValidatePresenceOfAttribute
-
   class Matcher
-
     def initialize(attribute)
       @attribute = attribute
     end
 
     def matches?(model)
       @model = model
-      binding.pry
       @model.valid?
       # model.errors.has_key?(@attribute)
     end
@@ -23,7 +20,6 @@ module ValidatePresenceOfAttribute
   end
 
   def validate_presence_of(attribute)
-    obj = Matcher.new(attribute)
-    return obj.matches?(attribute)
+    Matcher.new(attribute)
   end
 end
