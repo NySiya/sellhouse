@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe House do
-
   it { is_expected.to belong_to(:type) }
 
   it { is_expected.to have_many(:plan) }
